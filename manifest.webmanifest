@@ -1,0 +1,19 @@
+{
+  "name": "Flappy Dash — Sunset Run",
+  "short_name": "Flappy Dash",
+  "description": "A neon-soaked, one-button flying game. Tap to keep your bird airborne and thread the pipes.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#08050f",
+  "theme_color": "#08050f",
+  "icons": [
+    {
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

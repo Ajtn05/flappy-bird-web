@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+  <title>Flappy Dash — Sunset Run</title>
+  <meta name="description" content="A neon-soaked, one-button flying game. Tap or press space to keep your bird airborne and thread the pipes." />
+  <meta name="theme-color" content="#08050f" />
+  <meta property="og:title" content="Flappy Dash — Sunset Run" />
+  <meta property="og:description" content="One bird. Endless neon pipes. How far can you fly?" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <div class="stage" id="stage" data-phase="ready">
+      <canvas id="game" width="800" height="1400" aria-label="Flappy Dash game area"></canvas>
+
+      <div class="hud" aria-hidden="true">
+        <span class="hud__score" id="score">0</span>
+      </div>
+
+      <button class="icon-btn" id="mute" type="button" aria-label="Mute sound" aria-pressed="false">
+        <svg class="ico ico--on" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9h3.5L12 5.5v13L7.5 15H4z" />
+          <path d="M16 9a4.2 4.2 0 0 1 0 6" />
+          <path d="M18.8 6.5a8 8 0 0 1 0 11" />
+        </svg>
+        <svg class="ico ico--off" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9h3.5L12 5.5v13L7.5 15H4z" />
+          <path d="m16 9.5 5 5" />
+          <path d="m21 9.5-5 5" />
+        </svg>
+      </button>
+
+      <section class="overlay overlay--start" id="overlayStart">
+        <p class="eyebrow">Sunset Run</p>
+        <h1 class="logo"><span>Flappy</span><span class="logo__accent">Dash</span></h1>
+        <p class="blurb">Thread the neon pipes.<br />One tap keeps you flying.</p>
+        <button class="btn" id="play" type="button">Tap to fly</button>
+        <p class="hint"><kbd>Space</kbd><span aria-hidden="true">/</span><kbd>↑</kbd><span aria-hidden="true">/</span>tap</p>
+        <p class="best-line">Best <strong id="bestStart">0</strong></p>
+      </section>
+
+      <section class="overlay overlay--over is-hidden" id="overlayOver" aria-hidden="true" inert>
+        <div class="panel">
+          <p class="panel__kicker">Run over</p>
+          <h2 class="panel__title">Game Over</h2>
+          <p class="new-best is-hidden" id="newBest">New personal best!</p>
+          <div class="result">
+            <div class="medal" id="medal" data-tier="none" aria-hidden="true"><span>★</span></div>
+            <div class="stats">
+              <div class="stat"><span>Score</span><strong id="finalScore">0</strong></div>
+              <div class="stat"><span>Best</span><strong id="finalBest">0</strong></div>
+            </div>
+          </div>
+          <button class="btn" id="again" type="button">Fly again</button>
+          <p class="hint"><kbd>Space</kbd> to restart</p>
+        </div>
+      </section>
+
+      <section class="overlay overlay--pause is-hidden" id="overlayPause" aria-hidden="true" inert>
+        <div class="panel panel--small">
+          <p class="panel__kicker">Take a breath</p>
+          <h2 class="panel__title">Paused</h2>
+          <button class="btn" id="resume" type="button">Resume</button>
+          <p class="hint"><kbd>P</kbd> or <kbd>Esc</kbd></p>
+        </div>
+      </section>
+
+      <div class="flash" id="flash" aria-hidden="true"></div>
+    </div>
+
+    <footer class="foot">
+      <span><kbd>Space</kbd> flap</span>
+      <span class="foot__dot" aria-hidden="true">•</span>
+      <span><kbd>P</kbd> pause</span>
+      <span class="foot__dot" aria-hidden="true">•</span>
+      <span><kbd>M</kbd> sound</span>
+    </footer>
+  </main>
+
+  <noscript>
+    <p class="noscript">Flappy Dash needs JavaScript to fly. Please enable it and reload.</p>
+  </noscript>
+
+  <script src="/game.js" defer></script>
+</body>
+</html>
