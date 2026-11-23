@@ -7,11 +7,13 @@ airborne while threading an endless run of neon pipes through a synthwave sunset
 No frameworks, no build step, no assets to download — the whole game is drawn on a
 canvas at runtime.
 
+**Live:** https://flappy-dash.vercel.app
+
 Created in [T3 Code](https://t3.codes).
 
 ## Play
 
-Open the deployed site, or run it locally:
+Open the live link, or run it locally:
 
 ```sh
 python3 -m http.server 8000
