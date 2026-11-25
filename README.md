@@ -1,15 +1,14 @@
-<img src="assets/icon.svg" width="64" height="64" alt="Flappy Dash icon">
+<div align="center">
+  <img src="assets/icon.svg" width="64" height="64" alt="Flappy Dash icon">
+  <h1>Flappy Dash — Sunset Run</h1>
+  <p>Deepseek Test, sayang naman if di ko ihohost</p>
+</div>
 
-# Flappy Dash — Sunset Run
 
-A one-button arcade flyer for the browser. Tap, click, or press space to keep your bird
+(NOT FLAPPY BIRD) A one-button arcade flyer for the browser. Tap, click, or press space to keep your bird
 airborne while threading an endless run of neon pipes through a synthwave sunset.
-No frameworks, no build step, no assets to download — the whole game is drawn on a
-canvas at runtime.
 
 **Live:** https://flappy-dash.vercel.app
-
-Created in [T3 Code](https://t3.codes).
 
 ## Play
 
@@ -37,7 +36,7 @@ python3 -m http.server 8000
 - Locally synthesised sound effects (Web Audio), mute preference, and a persisted
   high score — no audio or image files needed.
 - Responsive layout for phones and desktop, pause on tab blur, reduced-motion support.
-- Medals at 10 / 20 / 30 / 40 points.
+- Medals at 10 / 20 / 30 / 40 points for your crumbling self-esteem.
 
 ## Structure
 
